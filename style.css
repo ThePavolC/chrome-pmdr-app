@@ -1,0 +1,30 @@
+body { 
+    padding-top: 51px;
+}
+
+.jumbotron {
+    padding: 0;
+}
+
+.tab-pane {
+    margin: 12px 32px 0 32px;
+}
+
+#timerHolder {
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: -webkit-linear-gradient(rgb(255, 255, 255) 0%, rgb(247, 36, 0) 0%);
+}
+
+#timer {
+    font-size: 30vw;
+}
+
+#tomato-icon {
+    width: 26px;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>PmdrApp</title>
+        
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="extra/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    
+    <body>
+
+
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img alt="PmdrApp" src="tomato-icon-512.png" id="tomato-icon">
+                </a>
+            </div>
+
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ><a data-toggle="tab" href="#go">Go</a></li>
+                    <li class="active"><a data-toggle="tab" href="#plan">Plan</a></li>
+                    <li><a data-toggle="tab" href="#analyze">Analyze</a></li>
+                    <li><a  data-toggle="tab" href="#settings">Settings</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div class="tab-content">
+        <!-- Go Page -->
+        <div id="go" class="tab-pane fade">
+            <div class="jumbotron">
+                <div id="timerHolder">
+                    <div id="timer">
+                        15:00
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Page -->
+        <div id="plan" class="tab-pane fade in active">
+
+        <!-- 
+            First Row, contains: 
+                - current task, title, description, tags,
+                - to do  list
+         -->
+            <div class="row"> <!-- start first row -->
+                <div class="col-md-8"> <!-- start current task -->
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Current Task</div>
+                            <div class="panel-body">
+                                <div class="col-md-4"> <!-- start time and button-->
+                                    <div>
+                                        15:00
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                    <div class="btn-group" role="group">
+                                      <button type="button" class="btn btn-default">Start</button>
+                                    </div>
+                                </div> <!-- end time and button-->
+
+                                <div class="col-md-8"> <!-- start input-->
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Title">
+                                        <input type="text" class="form-control" placeholder="Description">
+                                        <input type="text" value="tag1,tag2,tag3" data-role="tagsinput">
+                                    </div>
+                                </div> <!-- end input -->
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end current task -->
+
+                <div class="col-md-4"> <!-- start to do list -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">To Do List</div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <button type="button" class="list-group-item">To do 1</button>
+                                <button type="button" class="list-group-item">To do 2</button>
+                                <button type="button" class="list-group-item">To do 2</button>
+                                <button type="button" class="list-group-item">To do 2</button>
+                                <button type="button" class="list-group-item">To do 2</button>
+                                <button type="button" class="list-group-item">To do 2</button>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Add item to list">
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end to do list -->
+
+            </div> <!-- end first row -->
+
+            <!--
+                Second Row, contains:
+                    - list of previous tasks
+             -->
+            <div class="row"> <!-- start second row -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">Previous tasks</div>
+                    <div class="panel-body">
+                            
+                        <div class="list-group">
+                            <a href="#" class="list-group-item active">
+                            <h4 class="list-group-item-heading">List group item heading</h4>
+                            <p class="list-group-item-text">Some item description</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end second row -->
+
+        </div>
+
+        <div id="analyze" class="tab-pane fade">
+        </div>
+
+        <div id="settings" class="tab-pane fade">
+        </div>
+  
+    </div>
+
+        <script src="bootstrap/js/jquery.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="extra/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+        <script src="js/alarms.js"></script>
+
+    </body>
+
+</html>
